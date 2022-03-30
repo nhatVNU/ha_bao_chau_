@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ha Bao Chau</title>
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="logo1.jpg" class="cover" alt="">
+                </div>
+                <h3>habacha.ooo <br><span>Làng Đại Học Quốc Gia Tp Hồ Chí Minh</span></h3>
+
+            </div>
+            <div>
+                <img src="dot.png" class="dot" alt="">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="bg1.jpg" class="cover" alt="">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="heart.png" class="heart" onclick="likeButton()" alt="">
+                <img src="comment.png" alt="">
+                <img src="share.png" alt="">
+            </div>
+            <div class="right">
+                <img src="bookmark.png" alt="">
+            </div>
+        </div>
+        <h4 class="likes"> <span>Có</span> thuydiemmm_ <span>và</span> những người khác <span>thích</span></h4>
+        <h4 class="message"><b>habacha.ooo</b>1/3/2022- memories ❤️❤️❤️ <br><span>#mylife</span> <span>#myfriends</span> <span>#young</span> <br> <span>#youth</span> <span>#picoftheday</span> <span>#greattime</span></h4>
+        <h4 class="comments">Xem tất cả 5 bình luận</h4>
+        <div class="addComments">
+            <div class="userImg">
+                <img src="user.jpg" class="cover" alt="">
+            </div>
+            <input type="text" class="text" placeholder="Thêm bình luận...">
+        </div>
+    </div>
+    
+    <!-- <label>
+            <input type="checkbox" name="" id="">
+            <span><ion-icon name="bulb-outline"></ion-icon></span>
+            <div class="bulb"></div>
+    </label> -->
+    <div class="loader">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <a href="#">
+                <img src="2_3.jpg" alt="">
+            </a>
+            
+            <div class="title">Ha Bao Chau</div>
+            <div class="place">Ho Chi Minh City, VietNam</div>
+            
+        </div>
+        <div class="content">
+            <p>Hospitality Management</p>
+            <div class="button">
+                <div class="btn">
+                    <button onclick="location.href='Contact.html'" type="button">
+                        Contact</button>
+                </div>
+                <div class="btn">
+                    <button onclick="location.href='https://nhatvnu.github.io/ha_bao_chau/'" type="button">
+                        My Music Card</button>
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <li><a href="https://www.facebook.com/chaubaoha2302"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="https://www.instagram.com/habacha.ooo/"><span class="fa fa-instagram"></span></a></li>
+            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+        </div>
+    </div>
+
+
+
+    <script>
+        const img=document.querySelector("img");
+        img.onclick=function(){
+            this.classList.toggle("active");
+
+        }
+    </script>
+    <script>
+        const imgB=document.querySelector('.container img')
+        imgB.addEventListener("click", function(){
+            this.classList.toggle("active")
+        })
+    
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        function likeButton(){
+            let heart = document.querySelector('.heart');
+            let likes = document.querySelector('.likes');
+            if (heart.src.match("heart.png")){
+                heart.src="heart_red.png";
+                likes.innerHTML="<span>Có</span> nhat_tran_nhat <span>và</span> những người khác <span>thích</span>"
+            }
+            else{
+                heart.src="heart.png";
+                likes.innerHTML="<span>Có</span> thuydiemmm_ <span>và</span> những người khác <span>thích</span>"
+            }
+        }
+    </script>
+    <!-- <script>
+        document.addEventListener('mousemove', function(e){
+            let body = document.querySelector('body');
+            let heart=document.createElement('span');
+            let x=e.offsetX;
+            let y=e.offsetY;
+            heart.style.left=x+'px';
+            heart.style.top = y+'px';
+            let size =Math.random()*80;
+            heart.style.width=20+size+'px';
+            heart.style.height=20+size+'px';
+            body.appendChild(heart);
+            setTimeout(function(){
+                heart.remove();
+            },1000)
+
+        })
+    </script> -->
+</body>
+</html>
